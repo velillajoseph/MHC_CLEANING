@@ -30,7 +30,8 @@
     <div class="sticky-shell">
       <header class="site-header liquid-glass-nav">
         <a href="#home" class="logo-link" aria-label="MHC Cleaning">
-          <img src="./assets/logo.png" alt="MHC Cleaning logo" class="logo" />
+          <span class="logo-text">MHC</span>
+          <span class="logo-text-accent">Cleaning</span>
         </a>
         <div class="header-panel" id="primary-menu">
           <nav class="main-nav" aria-label="Primary">
@@ -90,19 +91,31 @@
                 height="800"
               />
             </figure>
-            <div class="hero-card" aria-label="Contact highlights">
-              <h2 data-i18n="heroCardTitle">Agenda tu limpieza hoy</h2>
-              <p data-i18n="heroCardBody">
-                Atención personalizada en español e inglés. Te respondemos en el menor tiempo
-                posible.
-              </p>
-              <div class="hero-card-actions">
-                <button class="btn btn-primary open-modal" type="button" data-i18n="heroCardCta">
-                  WhatsApp
-                </button>
-                <a class="btn btn-secondary" href="mailto:cleaningmhc@gmail.com">Email</a>
-              </div>
-            </div>
+            <figure class="hero-secondary-media">
+              <img
+                src="https://images.pexels.com/photos/6195963/pexels-photo-6195963.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                alt="Botella de limpieza, guantes y flores blancas en un espacio minimalista"
+                loading="lazy"
+                width="900"
+                height="650"
+              />
+              <figcaption class="hero-secondary-caption">
+                <img
+                  src="./assets/logo.png"
+                  alt="MHC Cleaning logo"
+                  class="hero-logo-mark"
+                  loading="lazy"
+                />
+                <div>
+                  <span class="hero-secondary-title" data-i18n="heroMediaTitle">
+                    Signature Care
+                  </span>
+                  <span class="hero-secondary-subtitle" data-i18n="heroMediaSubtitle">
+                    Detalles premium para hogares y alquileres.
+                  </span>
+                </div>
+              </figcaption>
+            </figure>
           </div>
         </div>
       </section>
@@ -146,7 +159,7 @@
             <article class="card">
               <div class="card-heading">
                 <span class="card-icon" aria-hidden="true">🧳</span>
-                <h3 data-i18n="service3Title">AirBnB / Short-Term Rental</h3>
+                <h3 data-i18n="service3Title">Airbnb / Short-Term Rental</h3>
               </div>
               <p data-i18n="service3Body">
                 Preparación rápida y confiable para tus huéspedes.
@@ -191,52 +204,125 @@
         </div>
       </section>
 
-      <section id="contact" class="section">
-        <div class="container contact-grid">
-          <div class="contact-intro">
+      <section id="contact" class="section contact-luxe">
+        <div class="container">
+          <div class="section-heading contact-heading">
+            <p class="eyebrow" data-i18n="contactEyebrow">Atención concierge</p>
             <h2 data-i18n="contactTitle">Contacto</h2>
             <p data-i18n="contactIntro">
-              Contáctanos para coordinar tu limpieza y recibir una cotización.
-            </p>
-            <p class="contact-note" data-i18n="contactHelper">
-              Para respuesta más rápida, contáctanos por WhatsApp.
+              Un servicio impecable comienza con una conversación discreta y personalizada.
             </p>
           </div>
-          <div class="contact-panel" aria-label="Contact methods">
-            <div class="contact-methods-grid">
-              <button class="contact-method-card open-modal" type="button">
-                <span class="contact-method-icon" aria-hidden="true">💬</span>
-                <span class="contact-method-title" data-i18n="contactCardWhatsappTitle">WhatsApp</span>
-                <span class="contact-method-helper" data-i18n="contactCardWhatsappHelper">
-                  Mensaje directo para cotizaciones rápidas.
+          <div class="contact-luxe-grid">
+            <div class="contact-luxe-card contact-luxe-main">
+              <h3 data-i18n="contactMainTitle">Diseñemos tu rutina de limpieza</h3>
+              <p data-i18n="contactMainBody">
+                Cuéntanos sobre tu espacio y crearemos un plan premium con acabados perfectos,
+                tiempos flexibles y atención bilingüe.
+              </p>
+              <div class="contact-luxe-actions">
+                <button class="btn btn-primary open-modal" type="button" data-i18n="contactPrimaryCta">
+                  Solicitar cotización por WhatsApp
+                </button>
+                <a class="btn btn-secondary" href="tel:+19392573875" data-i18n="contactSecondaryCta"
+                  >Llamar a un asesor</a
+                >
+                <a class="btn btn-tertiary" href="mailto:cleaningmhc@gmail.com" data-i18n="contactTertiaryCta"
+                  >Enviar correo</a
+                >
+              </div>
+              <p class="contact-luxe-note" data-i18n="contactNote">
+                Respondemos en menos de 2 horas hábiles.
+              </p>
+            </div>
+            <div class="contact-luxe-card contact-luxe-panel">
+              <div class="contact-luxe-item">
+                <span class="contact-luxe-label" data-i18n="contactDirectLabel">Línea directa</span>
+                <span class="contact-luxe-value">+1 (939) 257-3875</span>
+                <span class="contact-luxe-helper" data-i18n="contactDirectHelper">
+                  Atención en español e inglés.
                 </span>
-              </button>
-              <a class="contact-method-card" href="tel:+19392573875">
-                <span class="contact-method-icon" aria-hidden="true">📞</span>
-                <span class="contact-method-title" data-i18n="contactCardCallTitle">Llamar</span>
-                <span class="contact-method-helper" data-i18n="contactCardCallHelper">
-                  +1 (939) 257-3875 · Disponible 8:00 AM – 6:00 PM
+              </div>
+              <div class="contact-luxe-item">
+                <span class="contact-luxe-label" data-i18n="contactHoursLabel">Horario premium</span>
+                <span class="contact-luxe-value" data-i18n="contactHoursValue">
+                  Domingo a Sábado · 8:00 AM – 6:00 PM
                 </span>
-              </a>
-              <a class="contact-method-card" href="mailto:cleaningmhc@gmail.com">
-                <span class="contact-method-icon" aria-hidden="true">✉️</span>
-                <span class="contact-method-title" data-i18n="contactCardEmailTitle">Correo</span>
-                <span class="contact-method-helper" data-i18n="contactCardEmailHelper">
-                  cleaningmhc@gmail.com · Escríbenos en español o inglés.
+                <span class="contact-luxe-helper" data-i18n="contactHoursHelper">
+                  Disponibilidad para limpiezas urgentes.
                 </span>
-              </a>
-              <div class="contact-method-card" aria-label="Business hours">
-                <span class="contact-method-icon" aria-hidden="true">🕒</span>
-                <span class="contact-method-title" data-i18n="contactCardHoursTitle">Horario</span>
-                <span class="contact-method-helper" data-i18n="contactCardHoursHelper">
-                  Domingo a Sábado – 8:00 AM a 6:00 PM
+              </div>
+              <div class="contact-luxe-item">
+                <span class="contact-luxe-label" data-i18n="contactLocationLabel">Zona de servicio</span>
+                <span class="contact-luxe-value" data-i18n="contactLocationValue">
+                  Puerto Rico · Residencial, comercial y Airbnb.
                 </span>
+                <span class="contact-luxe-helper" data-i18n="contactLocationHelper">
+                  Cobertura flexible para cada necesidad.
+                </span>
+              </div>
+            </div>
+            <div class="contact-luxe-card contact-luxe-panel">
+              <h3 class="contact-luxe-panel-title" data-i18n="contactSignatureTitle">
+                Experiencia Signature
+              </h3>
+              <p class="contact-luxe-panel-body" data-i18n="contactSignatureBody">
+                Un equipo discreto, uniformado y atento. Seleccionamos productos premium y dejamos
+                cada espacio listo para impresionar.
+              </p>
+              <div class="contact-luxe-chips">
+                <span data-i18n="contactChip1">Planes semanales</span>
+                <span data-i18n="contactChip2">Checklists digitales</span>
+                <span data-i18n="contactChip3">Control de calidad</span>
               </div>
             </div>
           </div>
         </div>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <img src="./assets/logo.png" alt="MHC Cleaning logo" class="footer-logo" />
+          <div>
+            <p class="footer-name">MHC Cleaning</p>
+            <p class="footer-tagline" data-i18n="footerTagline">
+              Limpieza premium con acabados impecables.
+            </p>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3 data-i18n="footerServicesTitle">Servicios</h3>
+          <ul>
+            <li data-i18n="footerService1">Residencial</li>
+            <li data-i18n="footerService2">Limpieza profunda</li>
+            <li data-i18n="footerService3">Airbnb y alquileres</li>
+            <li data-i18n="footerService4">Comercial</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3 data-i18n="footerContactTitle">Contacto</h3>
+          <ul>
+            <li>+1 (939) 257-3875</li>
+            <li>cleaningmhc@gmail.com</li>
+            <li data-i18n="footerContactNote">Atención bilingüe · PR</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3 data-i18n="footerHoursTitle">Horario</h3>
+          <ul>
+            <li data-i18n="footerHoursValue">Domingo a Sábado · 8:00 AM – 6:00 PM</li>
+            <li data-i18n="footerHoursNote">Citas especiales bajo solicitud.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span data-i18n="footerCopyright">
+          © 2024 MHC Cleaning. Todos los derechos reservados.
+        </span>
+      </div>
+    </footer>
 
     <button class="floating-whatsapp open-modal" type="button" aria-label="WhatsApp">
       <svg viewBox="0 0 32 32" role="img" aria-hidden="true" focusable="false">

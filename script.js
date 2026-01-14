@@ -190,6 +190,11 @@ const closeModalButton = document.querySelector(".modal-close");
 const form = document.querySelector(".modal-form");
 const submitButton = form.querySelector('button[type="submit"]');
 const hint = form.querySelector(".form-hint");
+const siteHeader = document.querySelector(".site-header");
+const menuToggle = document.querySelector(".menu-toggle");
+const headerPanel = document.querySelector(".header-panel");
+const navLinks = document.querySelectorAll(".nav-link");
+const stickyShell = document.querySelector(".sticky-shell");
 
 const serviceLocationSelect = form.querySelector('select[name="serviceLocation"]');
 const municipalitySelect = form.querySelector('select[name="municipality"]');
@@ -199,6 +204,7 @@ const langButtons = document.querySelectorAll(".lang-btn");
 
 let currentLanguage = localStorage.getItem("mhcLanguage") || "es";
 let lastFocusedElement = null;
+let menuOpen = false;
 
 const setTextContent = (key) => {
   document.querySelectorAll(`[data-i18n="${key}"]`).forEach((node) => {
@@ -256,6 +262,28 @@ const closeModal = () => {
   }
 };
 
+const updateMenuState = (open) => {
+  menuOpen = open;
+  siteHeader.classList.toggle("menu-open", menuOpen);
+  menuToggle.setAttribute("aria-expanded", menuOpen ? "true" : "false");
+};
+
+const closeMenu = () => {
+  if (menuOpen) {
+    updateMenuState(false);
+  }
+};
+
+const updateScrollMargins = () => {
+  if (!stickyShell) {
+    return;
+  }
+  const offset = stickyShell.offsetHeight + 16;
+  document.querySelectorAll("section[id], main[id]").forEach((section) => {
+    section.style.scrollMarginTop = `${offset}px`;
+  });
+};
+
 const validateForm = () => {
   const isValid =
     serviceLocationSelect.value && municipalitySelect.value && serviceTypeSelect.value;
@@ -292,6 +320,8 @@ openModalButtons.forEach((btn) => {
   btn.addEventListener("click", () => openModal(btn));
 });
 
+menuToggle.addEventListener("click", () => updateMenuState(!menuOpen));
+
 closeModalButton.addEventListener("click", closeModal);
 modalOverlay.addEventListener("click", (event) => {
   if (!modal.contains(event.target)) {
@@ -302,6 +332,9 @@ modalOverlay.addEventListener("click", (event) => {
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && modalOverlay.classList.contains("active")) {
     closeModal();
+  }
+  if (event.key === "Escape" && menuOpen) {
+    closeMenu();
   }
 });
 
@@ -326,4 +359,18 @@ langButtons.forEach((btn) => {
   });
 });
 
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    closeMenu();
+  });
+});
+
+window.addEventListener("resize", () => {
+  updateScrollMargins();
+  if (window.innerWidth >= 768) {
+    closeMenu();
+  }
+});
+
 updateLanguage();
+updateScrollMargins();

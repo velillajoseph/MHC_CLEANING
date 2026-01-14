@@ -224,8 +224,16 @@ const populateSelect = (select, options) => {
   });
 };
 
+const updateDocumentTitle = (lang) => {
+  document.title =
+    lang === "es"
+      ? "MHC Cleaning — ¡Tu espacio, nuestro cuidado!"
+      : "MHC Cleaning — Your space, our care.";
+};
+
 const updateLanguage = () => {
   document.documentElement.lang = currentLanguage;
+  updateDocumentTitle(currentLanguage);
   Object.keys(translations[currentLanguage]).forEach((key) => {
     if (typeof translations[currentLanguage][key] === "string") {
       setTextContent(key);

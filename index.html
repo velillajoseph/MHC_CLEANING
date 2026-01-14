@@ -13,28 +13,36 @@
     />
   </head>
   <body>
-    <header class="site-header">
-      <div class="container header-content">
+    <div class="sticky-shell">
+      <header class="site-header">
         <a href="#home" class="logo-link" aria-label="MHC Cleaning">
           <img src="./assets/logo.png" alt="MHC Cleaning logo" class="logo" />
         </a>
-        <nav class="main-nav" aria-label="Primary">
-          <a href="#services" class="nav-link" data-i18n="navServices">Servicios</a>
-          <a href="#about" class="nav-link" data-i18n="navAbout">Nosotros</a>
-          <a href="#contact" class="nav-link" data-i18n="navContact">Contacto</a>
-        </nav>
-        <div class="header-actions">
-          <div class="lang-toggle" role="group" aria-label="Language toggle">
-            <button class="lang-btn active" data-lang="es" type="button">ES</button>
-            <span aria-hidden="true">|</span>
-            <button class="lang-btn" data-lang="en" type="button">EN</button>
+        <div class="header-panel" id="primary-menu">
+          <nav class="main-nav" aria-label="Primary">
+            <a href="#services" class="nav-link" data-i18n="navServices">Servicios</a>
+            <a href="#about" class="nav-link" data-i18n="navAbout">Nosotros</a>
+            <a href="#contact" class="nav-link" data-i18n="navContact">Contacto</a>
+          </nav>
+          <div class="header-actions">
+            <div class="lang-toggle" role="group" aria-label="Language toggle">
+              <button class="lang-btn active" data-lang="es" type="button">ES</button>
+              <span aria-hidden="true">|</span>
+              <button class="lang-btn" data-lang="en" type="button">EN</button>
+            </div>
+            <button class="btn btn-primary open-modal" type="button" data-i18n="headerWhatsapp">
+              WhatsApp
+            </button>
           </div>
-          <button class="btn btn-primary open-modal" type="button" data-i18n="headerWhatsapp">
-            WhatsApp
-          </button>
         </div>
-      </div>
-    </header>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
+          <span class="sr-only">Toggle menu</span>
+          <span class="menu-toggle-bar" aria-hidden="true"></span>
+          <span class="menu-toggle-bar" aria-hidden="true"></span>
+          <span class="menu-toggle-bar" aria-hidden="true"></span>
+        </button>
+      </header>
+    </div>
 
     <main id="home">
       <section class="hero section">

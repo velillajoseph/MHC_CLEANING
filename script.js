@@ -195,6 +195,7 @@ const menuToggle = document.querySelector(".menu-toggle");
 const headerPanel = document.querySelector(".header-panel");
 const navLinks = document.querySelectorAll(".nav-link");
 const stickyShell = document.querySelector(".sticky-shell");
+const sections = document.querySelectorAll("section");
 
 const serviceLocationSelect = form.querySelector('select[name="serviceLocation"]');
 const municipalitySelect = form.querySelector('select[name="municipality"]');
@@ -360,7 +361,15 @@ langButtons.forEach((btn) => {
 });
 
 navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
+  link.addEventListener("click", (event) => {
+    const href = link.getAttribute("href");
+    if (href && href.startsWith("#")) {
+      const target = document.querySelector(href);
+      if (target) {
+        event.preventDefault();
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
     closeMenu();
   });
 });
@@ -374,3 +383,25 @@ window.addEventListener("resize", () => {
 
 updateLanguage();
 updateScrollMargins();
+
+if (sections.length) {
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  sections.forEach((section) => section.classList.add("reveal"));
+
+  if (prefersReducedMotion) {
+    sections.forEach((section) => section.classList.add("is-visible"));
+  } else {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          entry.target.classList.toggle("is-visible", entry.isIntersecting);
+        });
+      },
+      {
+        threshold: 0.2,
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+  }
+}

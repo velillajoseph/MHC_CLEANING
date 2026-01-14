@@ -11,6 +11,10 @@
   --max-width: 1100px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 *,
 *::before,
 *::after {
@@ -41,6 +45,18 @@ a {
 
 .section-alt {
   background: var(--surface);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .container {
@@ -388,6 +404,18 @@ select {
   padding: 0;
   position: absolute;
   width: 1px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    transition: none;
+    transform: none;
+    opacity: 1;
+  }
 }
 
 @media (min-width: 768px) {

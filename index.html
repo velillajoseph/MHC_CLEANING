@@ -15,8 +15,20 @@
     />
   </head>
   <body>
+    <svg class="liquid-glass-filter" aria-hidden="true">
+      <filter id="liquid-glass-filter">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+        <feColorMatrix
+          in="blur"
+          mode="matrix"
+          values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+          result="liquid"
+        />
+        <feComposite in="SourceGraphic" in2="liquid" operator="atop" />
+      </filter>
+    </svg>
     <div class="sticky-shell">
-      <header class="site-header">
+      <header class="site-header liquid-glass-nav">
         <a href="#home" class="logo-link" aria-label="MHC Cleaning">
           <img src="./assets/logo.png" alt="MHC Cleaning logo" class="logo" />
         </a>

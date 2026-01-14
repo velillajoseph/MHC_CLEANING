@@ -114,6 +114,10 @@ a {
 .nav-link {
   color: var(--muted);
   font-size: 0.95rem;
+  min-height: 44px;
+  padding: 0 12px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .nav-link:hover,
@@ -141,6 +145,8 @@ a {
   cursor: pointer;
   color: inherit;
   padding: 6px 8px;
+  min-height: 44px;
+  min-width: 44px;
 }
 
 .lang-btn.active {
@@ -181,6 +187,8 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  min-height: 44px;
+  min-width: 44px;
 }
 
 .btn-primary {
@@ -424,8 +432,8 @@ a {
   border: none;
   background: var(--surface);
   border-radius: 50%;
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
   font-size: 1.4rem;
   cursor: pointer;
 }
@@ -515,15 +523,21 @@ select {
     gap: 12px;
     border-radius: 24px;
     padding: 12px 16px;
+    position: relative;
   }
 
   .header-panel {
     flex-direction: column;
     align-items: stretch;
-    gap: 16px;
+    gap: 12px;
     width: 100%;
     display: none;
-    padding-bottom: 12px;
+    margin-top: 4px;
+    padding: 12px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+    border: 1px solid rgba(15, 23, 42, 0.08);
   }
 
   .site-header.menu-open .header-panel {

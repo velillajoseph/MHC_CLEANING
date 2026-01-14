@@ -355,6 +355,16 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
+document.addEventListener("click", (event) => {
+  if (!menuOpen) {
+    return;
+  }
+
+  if (!siteHeader.contains(event.target)) {
+    closeMenu();
+  }
+});
+
 form.addEventListener("input", validateForm);
 
 form.addEventListener("submit", (event) => {

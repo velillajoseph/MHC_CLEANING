@@ -33,15 +33,14 @@ export const Hero = () => {
           </div>
         </div>
         <div className="hero-media">
-          <img
-            src="https://images.pexels.com/photos/4099467/pexels-photo-4099467.jpeg?auto=compress&cs=tinysrgb&w=1200"
-            alt="Profesional de limpieza desinfectando una mesa"
-            width={560}
-            height={640}
-          />
-          <div className="hero-card">
-            <p>Planes personalizados para hogares, Airbnb y oficinas.</p>
-            <span>Agenda flexible · Productos eco-friendly</span>
+          <div className="hero-image">
+            <img
+              src="https://images.pexels.com/photos/4099467/pexels-photo-4099467.jpeg?auto=compress&cs=tinysrgb&w=1200"
+              alt="Profesional de limpieza desinfectando una mesa"
+              width={560}
+              height={640}
+              loading="lazy"
+            />
           </div>
         </div>
       </div>

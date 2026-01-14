@@ -3,11 +3,11 @@ export const Header = () => {
     <header className="site-header">
       <div className="container header-content">
         <a className="brand" href="#home" aria-label="MHC Cleaning home">
-          <img className="brand-mark" src="/assets/logo.png" alt="" aria-hidden="true" />
-          <div>
-            <span className="brand-title">MHC Cleaning</span>
-            <span className="brand-subtitle">Tu espacio, nuestro cuidado</span>
-          </div>
+          <img
+            className="brand-wordmark"
+            src="/assets/logo-16-9.png"
+            alt="MHC Cleaning"
+          />
         </a>
         <nav className="nav" aria-label="Primary">
           <a href="#services" className="nav-link">

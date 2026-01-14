@@ -93,29 +93,14 @@ button {
 
 .brand {
   display: flex;
-  gap: 16px;
   align-items: center;
 }
 
-.brand-mark {
-  width: 68px;
-  height: 68px;
-  border-radius: 0;
-  padding: 0;
-  background: transparent;
-  border: none;
-  box-shadow: none;
-}
-
-.brand-title {
-  font-family: "Sora", "Poppins", sans-serif;
-  font-size: 1.15rem;
+.brand-wordmark {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
   display: block;
-}
-
-.brand-subtitle {
-  font-size: 0.85rem;
-  color: var(--text-muted);
 }
 
 .nav {
@@ -579,6 +564,10 @@ button {
   .header-content {
     grid-template-columns: 1fr;
     text-align: center;
+  }
+
+  .brand-wordmark {
+    height: 44px;
   }
 
   .nav {

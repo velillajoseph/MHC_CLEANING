@@ -84,8 +84,9 @@ main > .section:nth-of-type(even) {
   grid-template-columns: auto 1fr auto;
   grid-template-areas: "logo panel toggle";
   align-items: center;
+  justify-items: center;
   gap: 12px;
-  padding: 6px 16px;
+  padding: 6px 14px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(14px);
@@ -93,7 +94,7 @@ main > .section:nth-of-type(even) {
   border: 1px solid rgba(15, 23, 42, 0.12);
   max-width: var(--max-width);
   margin: 0 auto;
-  min-height: 60px;
+  min-height: 62px;
   line-height: 1.1;
 }
 
@@ -102,7 +103,7 @@ main > .section:nth-of-type(even) {
 }
 
 .logo {
-  width: 96px;
+  width: 70px;
 }
 
 .header-panel {
@@ -111,6 +112,7 @@ main > .section:nth-of-type(even) {
   align-items: center;
   justify-content: flex-end;
   gap: 20px;
+  justify-self: end;
 }
 
 .main-nav {
@@ -182,6 +184,7 @@ main > .section:nth-of-type(even) {
   justify-content: center;
   gap: 4px;
   cursor: pointer;
+  justify-self: end;
 }
 
 .menu-toggle-bar {
@@ -703,8 +706,9 @@ select {
       "panel panel";
     gap: 12px;
     border-radius: 24px;
-    padding: 12px 16px;
+    padding: 8px 14px;
     position: relative;
+    min-height: 56px;
   }
 
   .header-panel {
@@ -713,8 +717,8 @@ select {
     gap: 12px;
     width: 100%;
     display: none;
-    margin-top: 4px;
-    padding: 12px;
+    margin-top: 6px;
+    padding: 10px 12px;
     border-radius: 18px;
     background: rgba(255, 255, 255, 0.98);
     box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);

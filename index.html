@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MHC Cleaning | ¡Tu espacio, nuestro cuidado!</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-content">
+        <a href="#home" class="logo-link" aria-label="MHC Cleaning">
+          <img src="./assets/logo.png" alt="MHC Cleaning logo" class="logo" />
+        </a>
+        <nav class="main-nav" aria-label="Primary">
+          <a href="#services" class="nav-link" data-i18n="navServices">Servicios</a>
+          <a href="#about" class="nav-link" data-i18n="navAbout">Nosotros</a>
+          <a href="#contact" class="nav-link" data-i18n="navContact">Contacto</a>
+        </nav>
+        <div class="header-actions">
+          <div class="lang-toggle" role="group" aria-label="Language toggle">
+            <button class="lang-btn active" data-lang="es" type="button">ES</button>
+            <span aria-hidden="true">|</span>
+            <button class="lang-btn" data-lang="en" type="button">EN</button>
+          </div>
+          <button class="btn btn-primary open-modal" type="button" data-i18n="headerWhatsapp">
+            WhatsApp
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero section">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="tagline" data-i18n="heroTagline">¡Tu espacio, nuestro cuidado!</p>
+            <h1 data-i18n="heroHeadline">
+              Servicios de limpieza profesionales en los que puedes confiar
+            </h1>
+            <p class="subheadline" data-i18n="heroSubheadline">
+              Cotización gratis. Respuesta rápida. Servicio confiable.
+            </p>
+            <div class="hero-actions">
+              <button class="btn btn-primary open-modal" type="button" data-i18n="heroPrimaryCta">
+                Solicitar cotización gratis por WhatsApp
+              </button>
+              <a class="btn btn-secondary" href="tel:+19392573875" data-i18n="heroSecondaryCta"
+                >Llamar ahora</a
+              >
+            </div>
+            <div class="trust-row" aria-label="Trust indicators">
+              <span data-i18n="trustFree">Cotización gratis</span>
+              <span data-i18n="trustFast">Respuesta rápida</span>
+              <span data-i18n="trustQuality">Enfoque en calidad</span>
+            </div>
+          </div>
+          <div class="hero-card" aria-label="Contact highlights">
+            <h2 data-i18n="heroCardTitle">Agenda tu limpieza hoy</h2>
+            <p data-i18n="heroCardBody">
+              Atención personalizada en español e inglés. Te respondemos en el menor tiempo
+              posible.
+            </p>
+            <div class="hero-card-actions">
+              <button class="btn btn-primary open-modal" type="button" data-i18n="heroCardCta">
+                WhatsApp
+              </button>
+              <a class="btn btn-secondary" href="mailto:cleaningmhc@gmail.com">Email</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <h2 data-i18n="servicesTitle">Servicios</h2>
+            <p data-i18n="servicesIntro">
+              Soluciones flexibles para hogares, alquileres y negocios.
+            </p>
+          </div>
+          <div class="cards-grid">
+            <article class="card">
+              <h3 data-i18n="service1Title">Limpieza Residencial</h3>
+              <p data-i18n="service1Body">
+                Mantén tu hogar impecable con planes adaptados a tu rutina.
+              </p>
+            </article>
+            <article class="card">
+              <h3 data-i18n="service2Title">Limpieza Profunda</h3>
+              <p data-i18n="service2Body">
+                Atención al detalle para dejar cada espacio como nuevo.
+              </p>
+            </article>
+            <article class="card">
+              <h3 data-i18n="service3Title">AirBnB / Short-Term Rental</h3>
+              <p data-i18n="service3Body">
+                Preparación rápida y confiable para tus huéspedes.
+              </p>
+            </article>
+            <article class="card">
+              <h3 data-i18n="service4Title">Limpieza Comercial</h3>
+              <p data-i18n="service4Body">
+                Espacios de trabajo limpios que generan confianza en tu equipo y clientes.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section section-alt">
+        <div class="container about-grid">
+          <div>
+            <h2 data-i18n="aboutTitle">Sobre MHC Cleaning</h2>
+          </div>
+          <div class="about-copy">
+            <p data-i18n="aboutBody1">
+              En MHC Cleaning cuidamos cada detalle para que disfrutes de un ambiente limpio y
+              saludable. Nuestro equipo se adapta a tus necesidades con un trato profesional y
+              respetuoso.
+            </p>
+            <p data-i18n="aboutBody2">
+              Desde hogares hasta negocios, trabajamos con consistencia y comunicación clara para
+              que siempre sepas qué esperar.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container contact-grid">
+          <div>
+            <h2 data-i18n="contactTitle">Contacto</h2>
+            <p data-i18n="contactIntro">
+              Contáctanos para coordinar tu limpieza y recibir una cotización.
+            </p>
+          </div>
+          <div class="contact-card">
+            <div class="contact-item">
+              <span class="contact-label" data-i18n="contactPhoneLabel">Teléfono</span>
+              <a href="tel:+19392573875">+1 (939) 257-3875</a>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label" data-i18n="contactEmailLabel">Correo</span>
+              <a href="mailto:cleaningmhc@gmail.com">cleaningmhc@gmail.com</a>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label" data-i18n="contactHoursLabel">Horario</span>
+              <span data-i18n="contactHours">Domingo a Sábado – 8:00 AM a 6:00 PM</span>
+            </div>
+            <button class="btn btn-primary open-modal" type="button" data-i18n="contactWhatsappCta">
+              Solicitar cotización por WhatsApp
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <button class="floating-whatsapp open-modal" type="button" aria-label="WhatsApp">
+      WhatsApp
+    </button>
+
+    <div class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal" role="document">
+        <button class="modal-close" type="button" aria-label="Close modal">×</button>
+        <h2 id="modalTitle" data-i18n="modalTitle">Cotización por WhatsApp</h2>
+        <p class="modal-subtitle" data-i18n="modalSubtitle">
+          Completa los detalles para preparar tu mensaje.
+        </p>
+        <form class="modal-form">
+          <label class="field">
+            <span data-i18n="modalFieldLocation">Localidad de servicio</span>
+            <select name="serviceLocation" required>
+              <option value="" data-i18n="selectPlaceholder">Selecciona una opción</option>
+            </select>
+          </label>
+          <label class="field">
+            <span data-i18n="modalFieldCity">Ubicación</span>
+            <select name="municipality" required>
+              <option value="" data-i18n="selectPlaceholder">Selecciona una opción</option>
+            </select>
+          </label>
+          <label class="field">
+            <span data-i18n="modalFieldServiceType">Tipo de servicio</span>
+            <select name="serviceType" required>
+              <option value="" data-i18n="selectPlaceholder">Selecciona una opción</option>
+            </select>
+          </label>
+          <p class="form-hint" role="alert" aria-live="polite"></p>
+          <button class="btn btn-primary" type="submit" data-i18n="modalSubmit" disabled>
+            Abrir WhatsApp
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

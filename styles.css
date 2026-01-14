@@ -370,6 +370,8 @@ main > .section:nth-of-type(even) {
 }
 
 .contact-panel {
+}
+
 .about-media {
   aspect-ratio: 4 / 5;
 }
@@ -639,6 +641,8 @@ select {
 
   .contact-cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .contact-methods-grid {
     grid-template-columns: repeat(2, 1fr);
   }

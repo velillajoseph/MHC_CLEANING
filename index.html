@@ -169,28 +169,48 @@
 
       <section id="contact" class="section">
         <div class="container contact-grid">
-          <div>
+          <div class="contact-intro">
             <h2 data-i18n="contactTitle">Contacto</h2>
             <p data-i18n="contactIntro">
               Contáctanos para coordinar tu limpieza y recibir una cotización.
             </p>
+            <p class="contact-note">
+              <span>Para respuesta más rápida, contáctanos por WhatsApp.</span>
+              <span>For the fastest response, contact us on WhatsApp.</span>
+            </p>
           </div>
-          <div class="contact-card">
-            <div class="contact-item">
-              <span class="contact-label" data-i18n="contactPhoneLabel">Teléfono</span>
-              <a href="tel:+19392573875">+1 (939) 257-3875</a>
+          <div class="contact-panel">
+            <h3 class="contact-panel-title">Contact Methods</h3>
+            <div class="contact-methods-grid">
+              <button class="contact-method-card open-modal" type="button">
+                <span class="contact-method-icon" aria-hidden="true">💬</span>
+                <span class="contact-method-title">WhatsApp / WhatsApp</span>
+                <span class="contact-method-helper">
+                  Mensaje directo para cotizaciones rápidas. / Direct message for quick quotes.
+                </span>
+              </button>
+              <a class="contact-method-card" href="tel:+19392573875">
+                <span class="contact-method-icon" aria-hidden="true">📞</span>
+                <span class="contact-method-title">Llamar / Call</span>
+                <span class="contact-method-helper">
+                  +1 (939) 257-3875 · Disponible 8:00 AM – 6:00 PM
+                </span>
+              </a>
+              <a class="contact-method-card" href="mailto:cleaningmhc@gmail.com">
+                <span class="contact-method-icon" aria-hidden="true">✉️</span>
+                <span class="contact-method-title">Correo / Email</span>
+                <span class="contact-method-helper">
+                  cleaningmhc@gmail.com · Escríbenos en español o inglés.
+                </span>
+              </a>
+              <div class="contact-method-card" aria-label="Business hours">
+                <span class="contact-method-icon" aria-hidden="true">🕒</span>
+                <span class="contact-method-title">Horario / Hours</span>
+                <span class="contact-method-helper">
+                  Domingo a Sábado – 8:00 AM a 6:00 PM / Sunday to Saturday – 8:00 AM to 6:00 PM
+                </span>
+              </div>
             </div>
-            <div class="contact-item">
-              <span class="contact-label" data-i18n="contactEmailLabel">Correo</span>
-              <a href="mailto:cleaningmhc@gmail.com">cleaningmhc@gmail.com</a>
-            </div>
-            <div class="contact-item">
-              <span class="contact-label" data-i18n="contactHoursLabel">Horario</span>
-              <span data-i18n="contactHours">Domingo a Sábado – 8:00 AM a 6:00 PM</span>
-            </div>
-            <button class="btn btn-primary open-modal" type="button" data-i18n="contactWhatsappCta">
-              Solicitar cotización por WhatsApp
-            </button>
           </div>
         </div>
       </section>

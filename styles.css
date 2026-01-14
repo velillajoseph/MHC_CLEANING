@@ -324,6 +324,23 @@ a {
   gap: 32px;
 }
 
+.contact-intro {
+  display: grid;
+  gap: 16px;
+}
+
+.contact-note {
+  margin: 0;
+  padding: 16px 18px;
+  border-radius: 14px;
+  background: rgba(0, 163, 230, 0.08);
+  color: var(--text);
+  display: grid;
+  gap: 6px;
+  font-weight: 500;
+}
+
+.contact-panel {
 .about-media {
   aspect-ratio: 4 / 5;
 }
@@ -335,20 +352,57 @@ a {
 .contact-card {
   padding: 28px;
   border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 163, 230, 0.15);
   box-shadow: var(--shadow);
+  display: grid;
+  gap: 20px;
+}
+
+.contact-panel-title {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.contact-methods-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.contact-method-card {
   background: white;
+  border-radius: 14px;
+  padding: 18px;
   display: grid;
-  gap: 18px;
+  gap: 6px;
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(15, 23, 42, 0.05);
+  text-align: left;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
 }
 
-.contact-item {
-  display: grid;
-  gap: 4px;
+.contact-method-card:hover {
+  transform: translateY(-1px);
 }
 
-.contact-label {
-  font-size: 0.85rem;
+.contact-method-card:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
+.contact-method-icon {
+  font-size: 1.4rem;
+}
+
+.contact-method-title {
+  font-weight: 600;
+}
+
+.contact-method-helper {
   color: var(--muted);
+  font-size: 0.9rem;
 }
 
 .floating-whatsapp {
@@ -503,6 +557,10 @@ select {
   .contact-grid {
     grid-template-columns: 1fr 1fr;
     align-items: center;
+  }
+
+  .contact-methods-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 

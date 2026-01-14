@@ -41,6 +41,7 @@ a {
 
 .section {
   padding: 88px 0;
+  scroll-margin-top: 96px;
 }
 
 .section-alt {
@@ -214,6 +215,32 @@ a {
   gap: 32px;
 }
 
+.hero-visual {
+  display: grid;
+  gap: 24px;
+}
+
+.hero-image,
+.services-media,
+.about-media {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: var(--surface);
+}
+
+.hero-image img,
+.services-media img,
+.about-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-image {
+  aspect-ratio: 5 / 4;
+}
+
 .hero-copy h1 {
   font-size: clamp(2rem, 4vw, 3rem);
   margin: 8px 0;
@@ -279,6 +306,11 @@ a {
   gap: 20px;
 }
 
+.services-media {
+  margin: 0 0 28px;
+  aspect-ratio: 16 / 9;
+}
+
 .card {
   padding: 24px;
   border-radius: var(--radius);
@@ -309,6 +341,15 @@ a {
 }
 
 .contact-panel {
+.about-media {
+  aspect-ratio: 4 / 5;
+}
+
+.about-copy h2 {
+  margin-top: 0;
+}
+
+.contact-card {
   padding: 28px;
   border-radius: var(--radius);
   background: rgba(255, 255, 255, 0.9);
@@ -369,14 +410,41 @@ a {
   right: 20px;
   bottom: 20px;
   z-index: 20;
-  background: var(--accent);
-  color: #1c1c1c;
+  background: #25d366;
+  color: #ffffff;
   border: none;
-  border-radius: 999px;
-  padding: 14px 20px;
-  font-weight: 700;
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.floating-whatsapp svg {
+  width: 26px;
+  height: 26px;
+  fill: currentColor;
+}
+
+.floating-whatsapp:hover {
+  background: #20bd5b;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.floating-whatsapp:active {
+  background: #1aa450;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.24);
+  transform: translateY(1px);
+}
+
+.floating-whatsapp:focus-visible {
+  outline: 3px solid rgba(37, 211, 102, 0.45);
+  outline-offset: 4px;
 }
 
 .modal-overlay {

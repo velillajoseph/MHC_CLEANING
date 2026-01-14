@@ -3,7 +3,7 @@ const translations = {
     navServices: "Servicios",
     navAbout: "Nosotros",
     navContact: "Contacto",
-    headerWhatsapp: "WhatsApp",
+    headerContactCta: "Contáctanos",
     heroHeadline: "Servicios de limpieza profesionales en los que puedes confiar",
     heroSubheadline: "Cotización gratis. Respuesta rápida. Servicio confiable.",
     heroTagline: "¡Tu espacio, nuestro cuidado!",
@@ -54,7 +54,7 @@ const translations = {
     navServices: "Services",
     navAbout: "About",
     navContact: "Contact",
-    headerWhatsapp: "WhatsApp",
+    headerContactCta: "Contact Us",
     heroHeadline: "Professional Cleaning Services You Can Trust",
     heroSubheadline: "Free quotes. Fast response. Reliable service.",
     heroTagline: "Your space, our care.",
@@ -196,6 +196,7 @@ const headerPanel = document.querySelector(".header-panel");
 const navLinks = document.querySelectorAll(".nav-link");
 const stickyShell = document.querySelector(".sticky-shell");
 const sections = document.querySelectorAll("section");
+const floatingWhatsappButton = document.querySelector(".floating-whatsapp");
 
 const serviceLocationSelect = form.querySelector('select[name="serviceLocation"]');
 const municipalitySelect = form.querySelector('select[name="municipality"]');
@@ -224,8 +225,16 @@ const populateSelect = (select, options) => {
   });
 };
 
+const updateDocumentTitle = (lang) => {
+  document.title =
+    lang === "es"
+      ? "MHC Cleaning — ¡Tu espacio, nuestro cuidado!"
+      : "MHC Cleaning — Your space, our care.";
+};
+
 const updateLanguage = () => {
   document.documentElement.lang = currentLanguage;
+  updateDocumentTitle(currentLanguage);
   Object.keys(translations[currentLanguage]).forEach((key) => {
     if (typeof translations[currentLanguage][key] === "string") {
       setTextContent(key);
@@ -244,6 +253,13 @@ const updateLanguage = () => {
   langButtons.forEach((btn) => {
     btn.classList.toggle("active", btn.dataset.lang === currentLanguage);
   });
+
+  if (floatingWhatsappButton) {
+    floatingWhatsappButton.setAttribute(
+      "aria-label",
+      currentLanguage === "es" ? "Abrir WhatsApp" : "Open WhatsApp"
+    );
+  }
 
   validateForm();
 };

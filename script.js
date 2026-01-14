@@ -196,6 +196,7 @@ const headerPanel = document.querySelector(".header-panel");
 const navLinks = document.querySelectorAll(".nav-link");
 const stickyShell = document.querySelector(".sticky-shell");
 const sections = document.querySelectorAll("section");
+const floatingWhatsappButton = document.querySelector(".floating-whatsapp");
 
 const serviceLocationSelect = form.querySelector('select[name="serviceLocation"]');
 const municipalitySelect = form.querySelector('select[name="municipality"]');
@@ -244,6 +245,13 @@ const updateLanguage = () => {
   langButtons.forEach((btn) => {
     btn.classList.toggle("active", btn.dataset.lang === currentLanguage);
   });
+
+  if (floatingWhatsappButton) {
+    floatingWhatsappButton.setAttribute(
+      "aria-label",
+      currentLanguage === "es" ? "Abrir WhatsApp" : "Open WhatsApp"
+    );
+  }
 
   validateForm();
 };

@@ -316,14 +316,41 @@ a {
   right: 20px;
   bottom: 20px;
   z-index: 20;
-  background: var(--accent);
-  color: #1c1c1c;
+  background: #25d366;
+  color: #ffffff;
   border: none;
-  border-radius: 999px;
-  padding: 14px 20px;
-  font-weight: 700;
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.floating-whatsapp svg {
+  width: 26px;
+  height: 26px;
+  fill: currentColor;
+}
+
+.floating-whatsapp:hover {
+  background: #20bd5b;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.floating-whatsapp:active {
+  background: #1aa450;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.24);
+  transform: translateY(1px);
+}
+
+.floating-whatsapp:focus-visible {
+  outline: 3px solid rgba(37, 211, 102, 0.45);
+  outline-offset: 4px;
 }
 
 .modal-overlay {

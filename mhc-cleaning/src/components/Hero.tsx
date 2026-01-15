@@ -19,8 +19,8 @@ export const Hero = () => {
           </div>
           <div className="hero-highlights">
             <div>
-              <span className="highlight-label">24h</span>
-              <span className="highlight-caption">Respuesta promedio</span>
+              <span className="highlight-label">Checklist</span>
+              <span className="highlight-caption">Limpieza certificada</span>
             </div>
             <div>
               <span className="highlight-label">4X</span>

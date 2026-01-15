@@ -686,6 +686,9 @@ button {
 
   .nav-toggle[aria-expanded="true"] .nav-toggle-icon::after {
     transform: translateY(0) rotate(-45deg);
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 8px;
   }
 
   .header-actions {

@@ -1,4 +1,8 @@
+import { useState } from "react";
+
 export const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <header className="site-header">
       <div className="container header-content">
@@ -9,14 +13,42 @@ export const Header = () => {
             alt="MHC Cleaning"
           />
         </a>
-        <nav className="nav" aria-label="Primary">
-          <a href="#services" className="nav-link">
+        <button
+          className="nav-toggle"
+          type="button"
+          aria-expanded={isMenuOpen}
+          aria-controls="primary-navigation"
+          onClick={() => setIsMenuOpen((open) => !open)}
+        >
+          <span className="sr-only">
+            {isMenuOpen ? "Cerrar menú" : "Abrir menú"}
+          </span>
+          <span className="nav-toggle-icon" aria-hidden="true" />
+        </button>
+        <nav
+          id="primary-navigation"
+          className={`nav ${isMenuOpen ? "is-open" : ""}`}
+          aria-label="Primary"
+        >
+          <a
+            href="#services"
+            className="nav-link"
+            onClick={() => setIsMenuOpen(false)}
+          >
             Servicios
           </a>
-          <a href="#about" className="nav-link">
+          <a
+            href="#about"
+            className="nav-link"
+            onClick={() => setIsMenuOpen(false)}
+          >
             Nosotros
           </a>
-          <a href="#contact" className="nav-link">
+          <a
+            href="#contact"
+            className="nav-link"
+            onClick={() => setIsMenuOpen(false)}
+          >
             Contacto
           </a>
         </nav>

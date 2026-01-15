@@ -1,6 +1,86 @@
 import { useState, type ChangeEvent, type FormEvent } from "react";
 
 const whatsappNumber = "19392573875";
+const municipalities = [
+  "Adjuntas",
+  "Aguada",
+  "Aguadilla",
+  "Aguas Buenas",
+  "Aibonito",
+  "Añasco",
+  "Arecibo",
+  "Arroyo",
+  "Barceloneta",
+  "Barranquitas",
+  "Bayamón",
+  "Cabo Rojo",
+  "Caguas",
+  "Camuy",
+  "Canóvanas",
+  "Carolina",
+  "Cataño",
+  "Cayey",
+  "Ceiba",
+  "Ciales",
+  "Cidra",
+  "Coamo",
+  "Comerío",
+  "Corozal",
+  "Culebra",
+  "Dorado",
+  "Fajardo",
+  "Florida",
+  "Guánica",
+  "Guayama",
+  "Guayanilla",
+  "Guaynabo",
+  "Gurabo",
+  "Hatillo",
+  "Hormigueros",
+  "Humacao",
+  "Isabela",
+  "Jayuya",
+  "Juana Díaz",
+  "Juncos",
+  "Lajas",
+  "Lares",
+  "Las Marías",
+  "Las Piedras",
+  "Loíza",
+  "Luquillo",
+  "Manatí",
+  "Maricao",
+  "Maunabo",
+  "Mayagüez",
+  "Moca",
+  "Morovis",
+  "Naguabo",
+  "Naranjito",
+  "Orocovis",
+  "Patillas",
+  "Peñuelas",
+  "Ponce",
+  "Quebradillas",
+  "Rincón",
+  "Río Grande",
+  "Sabana Grande",
+  "Salinas",
+  "San Germán",
+  "San Juan",
+  "San Lorenzo",
+  "San Sebastián",
+  "Santa Isabel",
+  "Toa Alta",
+  "Toa Baja",
+  "Trujillo Alto",
+  "Utuado",
+  "Vega Alta",
+  "Vega Baja",
+  "Vieques",
+  "Villalba",
+  "Yabucoa",
+  "Yauco",
+];
 
 const buildWhatsappMessage = (serviceType: string, serviceLocation: string, municipality: string) =>
   `Hola, me interesa un servicio de ${serviceType} en ${serviceLocation}, municipio de ${municipality}. ¿Podemos coordinar una cotización?`;
@@ -13,7 +93,7 @@ export const Contact = () => {
     municipality: "",
   });
 
-  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = event.target;
     setFormValues((prev) => ({ ...prev, [name]: value }));
   };
@@ -118,36 +198,52 @@ export const Contact = () => {
             <form className="modal-form" onSubmit={handleSubmit}>
               <label>
                 Tipo de servicio
-                <input
+                <select
                   name="serviceType"
-                  type="text"
-                  placeholder="Ej. Limpieza profunda"
                   value={formValues.serviceType}
                   onChange={handleChange}
                   required
-                />
+                >
+                  <option value="" disabled>
+                    Seleccione...
+                  </option>
+                  <option value="Limpieza Regular">Limpieza Regular</option>
+                  <option value="Limpieza Profunda">Limpieza Profunda</option>
+                </select>
               </label>
               <label>
                 Ubicación del servicio
-                <input
+                <select
                   name="serviceLocation"
-                  type="text"
-                  placeholder="Ej. Residencia o negocio"
                   value={formValues.serviceLocation}
                   onChange={handleChange}
                   required
-                />
+                >
+                  <option value="" disabled>
+                    Seleccione...
+                  </option>
+                  <option value="Renta a corto plazo">Renta a corto plazo</option>
+                  <option value="Residencial">Residencial</option>
+                  <option value="Comercial">Comercial</option>
+                </select>
               </label>
               <label>
                 Municipio
-                <input
+                <select
                   name="municipality"
-                  type="text"
-                  placeholder="Ej. San Juan"
                   value={formValues.municipality}
                   onChange={handleChange}
                   required
-                />
+                >
+                  <option value="" disabled>
+                    Seleccione...
+                  </option>
+                  {municipalities.map((municipality) => (
+                    <option key={municipality} value={municipality}>
+                      {municipality}
+                    </option>
+                  ))}
+                </select>
               </label>
               <div className="modal-actions">
                 <button type="button" className="button button-ghost" onClick={() => setIsModalOpen(false)}>

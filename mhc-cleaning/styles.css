@@ -533,6 +533,13 @@ button {
   font-family: inherit;
 }
 
+.modal-form select {
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  font-family: inherit;
+}
+
 .modal-actions {
   display: flex;
   justify-content: flex-end;
